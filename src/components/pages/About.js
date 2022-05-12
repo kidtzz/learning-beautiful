@@ -4,7 +4,7 @@ export default function About() {
     return (
         <div className="container ">
             <div className="p-5 d-flex">
-                <h1>This Aplication just Try jhehe</h1>
+                <h1>This Aplication just ahsdhshad jhehe</h1>
                 <p>
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                     Repellendus incidunt aperiam obcaecati, quis quasi, error
