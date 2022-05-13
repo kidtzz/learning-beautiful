@@ -1,10 +1,10 @@
 import React from "react";
 
-const User = () => {
+const User = (props) => {
     return (
         <div>
             <h1>User Details</h1>
-            {/* {this.props.match.params.id} */}
+            {this.props.match.params.id}
         </div>
     );
 };
