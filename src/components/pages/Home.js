@@ -4,7 +4,8 @@ import { Table } from "react-bootstrap";
 import About from "./About";
 
 const api = "https://jsonplaceholder.typicode.com/posts";
-class Home extends React.Component {
+
+export default class Home extends React.Component {
     constructor(props) {
         super(props);
 
@@ -19,6 +20,7 @@ class Home extends React.Component {
             });
         });
     }
+
     render() {
         return (
             <div className="container">
@@ -29,6 +31,7 @@ class Home extends React.Component {
                             <th>id</th>
                             <th>Title</th>
                             <th>Body</th>
+                            <th>action</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -37,6 +40,14 @@ class Home extends React.Component {
                                 <td>{index.id}</td>
                                 <td>{index.title}</td>
                                 <td>{index.body}</td>
+                                <td>
+                                    <button className="btn btn-primary">
+                                        Update
+                                    </button>
+                                    <button className="btn btn-danger">
+                                        Delete
+                                    </button>
+                                </td>
                             </tr>
                         ))}
                     </tbody>
@@ -45,5 +56,3 @@ class Home extends React.Component {
         );
     }
 }
-
-export default Home;
