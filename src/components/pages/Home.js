@@ -42,10 +42,10 @@ export default class Home extends React.Component {
                                 <td>{index.body}</td>
                                 <td>
                                     <button className="btn btn-primary">
-                                        Update
+                                        update
                                     </button>
                                     <button className="btn btn-danger">
-                                        Delete
+                                        delete
                                     </button>
                                 </td>
                             </tr>
