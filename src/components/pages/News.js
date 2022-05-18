@@ -31,7 +31,7 @@ export default class News extends React.Component {
         return (
             <div>
                 <div className="container">
-                    <h2 className="text-center"> ini Album Photo</h2>
+                    <h2 className="text-center"> Ini Album Photo</h2>
                     <ul>
                         {this.state.users.map((index) => (
                             <li key={index.id}>

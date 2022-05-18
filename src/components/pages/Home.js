@@ -8,11 +8,11 @@ const api = "https://jsonplaceholder.typicode.com/posts";
 export default class Home extends React.Component {
     constructor(props) {
         super(props);
-
         this.state = {
             postRandom: [],
         };
     }
+
     componentDidMount() {
         axios.get(api).then((res) => {
             this.setState({
@@ -40,11 +40,11 @@ export default class Home extends React.Component {
                                 <td>{index.id}</td>
                                 <td>{index.title}</td>
                                 <td>{index.body}</td>
-                                <td>
-                                    <button className="btn btn-primary">
+                                <td className="d-flex">
+                                    <button className="mx-2 btn btn-primary">
                                         update
                                     </button>
-                                    <button className="btn btn-danger">
+                                    <button className="mx-2 btn btn-danger">
                                         delete
                                     </button>
                                 </td>
