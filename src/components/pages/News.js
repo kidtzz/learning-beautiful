@@ -17,7 +17,7 @@ export default class News extends React.Component {
             .get(apiAlbum, {
                 //untuk show limit data
                 params: {
-                    _limit: 10,
+                    _limit: 15,
                 },
             })
             .then((response) => {
