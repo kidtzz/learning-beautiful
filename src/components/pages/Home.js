@@ -29,10 +29,10 @@ export default class Home extends React.Component {
                 <Table striped bordered hover>
                     <thead>
                         <tr>
-                            <th>id</th>
+                            <th>ID</th>
                             <th>Title</th>
                             <th>Body</th>
-                            <th>action</th>
+                            <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
