@@ -53,23 +53,30 @@ export default class Home extends React.Component {
             <div className="container">
                 <About />
                 <div className="tambah-data">
-                    <h2>insert Data disini</h2>
-                    <div className="d-flex">
-                        <Form>
-                            <Form.Group
-                                className="mb-3"
-                                controlId="formBasicEmail"
-                            >
-                                <Form.Control
-                                    type="email"
-                                    placeholder="Insert data"
-                                />
-                            </Form.Group>
-                        </Form>
-                        <button className="btn btn-primary ">Add</button>
-                    </div>
-                </div>
+                    <h4>Insert Data disini</h4>
 
+                    <Form>
+                        <Form.Group
+                            className="d-flex mb-3"
+                            controlId="formBasicEmail"
+                        >
+                            <Form.Control
+                                type="email"
+                                className="mr-2"
+                                placeholder="Title"
+                            />
+                            <Form.Control
+                                type="email"
+                                className="mx-2"
+                                placeholder="Body"
+                            />
+                            <button className="btn btn-primary px-5 ">
+                                Add
+                            </button>
+                        </Form.Group>
+                    </Form>
+                </div>
+                <div className="my-5" />
                 <Table striped bordered hover className="mb-5">
                     <thead>
                         <tr>
