@@ -7,7 +7,13 @@ import "../assets/css/Header.min.css";
 const Header = () => {
     return (
         <div className=" header-inner">
-            <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+            <Navbar
+                collapseOnSelect
+                expand="lg"
+                bg="dark"
+                variant="dark"
+                fixed="top"
+            >
                 <Container>
                     <Navbar.Brand href=" " to="/">
                         Arch-Kidz Learning

@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-import { Table } from "react-bootstrap";
+import { Table, Form } from "react-bootstrap";
 import About from "./About";
 export default class Home extends React.Component {
     constructor(props) {
@@ -9,7 +9,7 @@ export default class Home extends React.Component {
             postRandom: [],
         };
     }
-
+    //get Data
     componentDidMount() {
         axios
             .get("https://jsonplaceholder.typicode.com/posts", {
@@ -24,14 +24,15 @@ export default class Home extends React.Component {
             });
     }
 
-    updateRow(id) {
-        axios
-            .put(`https://jsonplaceholder.typicode.com/posts/${id}`)
-            .then((response) => {
-                this.setState(response.data);
-            });
-    }
+    // updateRow(id) {
+    //     axios
+    //         .put(`https://jsonplaceholder.typicode.com/posts/${id}`)
+    //         .then((response) => {
+    //             this.setState(response.data);
+    //         });
+    // }
 
+    //Delete Data ges
     deleteRow(id, e) {
         axios
             .delete(`https://jsonplaceholder.typicode.com/posts/${id}`)
@@ -51,6 +52,24 @@ export default class Home extends React.Component {
         return (
             <div className="container">
                 <About />
+                <div className="tambah-data">
+                    <h2>insert Data disini</h2>
+                    <div className="d-flex">
+                        <Form>
+                            <Form.Group
+                                className="mb-3"
+                                controlId="formBasicEmail"
+                            >
+                                <Form.Control
+                                    type="email"
+                                    placeholder="Insert data"
+                                />
+                            </Form.Group>
+                        </Form>
+                        <button className="btn btn-primary ">Add</button>
+                    </div>
+                </div>
+
                 <Table striped bordered hover className="mb-5">
                     <thead>
                         <tr>
