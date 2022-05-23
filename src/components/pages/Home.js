@@ -2,9 +2,6 @@ import React from "react";
 import axios from "axios";
 import { Table } from "react-bootstrap";
 import About from "./About";
-
-const api = "https://jsonplaceholder.typicode.com/posts";
-
 export default class Home extends React.Component {
     constructor(props) {
         super(props);
@@ -14,12 +11,19 @@ export default class Home extends React.Component {
     }
 
     componentDidMount() {
-        axios.get(api).then((res) => {
-            this.setState({
-                postRandom: res.data,
+        axios
+            .get("https://jsonplaceholder.typicode.com/posts", {
+                params: {
+                    _limit: 10,
+                },
+            })
+            .then((res) => {
+                this.setState({
+                    postRandom: res.data,
+                });
             });
-        });
     }
+
     updateRow(id) {
         axios
             .put(`https://jsonplaceholder.typicode.com/posts/${id}`)
@@ -27,7 +31,7 @@ export default class Home extends React.Component {
                 this.setState(response.data);
             });
     }
-    
+
     deleteRow(id, e) {
         axios
             .delete(`https://jsonplaceholder.typicode.com/posts/${id}`)
@@ -47,7 +51,7 @@ export default class Home extends React.Component {
         return (
             <div className="container">
                 <About />
-                <Table striped bordered hover>
+                <Table striped bordered hover className="mb-5">
                     <thead>
                         <tr>
                             <th>ID</th>

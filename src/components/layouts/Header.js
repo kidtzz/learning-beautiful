@@ -9,7 +9,9 @@ const Header = () => {
         <div className=" header-inner">
             <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
                 <Container>
-                    <Navbar.Brand href="#home">Arch-Kidz Learning</Navbar.Brand>
+                    <Navbar.Brand href=" " to="/">
+                        Arch-Kidz Learning
+                    </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto">
@@ -18,6 +20,9 @@ const Header = () => {
                             </NavLink>
                             <NavLink className="Nav-header" to="/News">
                                 News
+                            </NavLink>
+                            <NavLink className="Nav-header" to="/Album">
+                                Album
                             </NavLink>
                         </Nav>
                     </Navbar.Collapse>
