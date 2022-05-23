@@ -34,7 +34,7 @@ export default class News extends React.Component {
                     <h2 className="text-center"> Ini Album Photo</h2>
                     <ul>
                         {this.state.users.map((index) => (
-                            <li key={index.id}>
+                            <li key={index}>
                                 <NavLink
                                     to={`User/${index.id}`}
                                     onClick={console.log(index.id)}

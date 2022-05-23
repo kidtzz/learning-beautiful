@@ -10,7 +10,6 @@ export default class Home extends React.Component {
         super(props);
         this.state = {
             postRandom: [],
-            asw: "",
         };
     }
 
@@ -21,6 +20,14 @@ export default class Home extends React.Component {
             });
         });
     }
+    updateRow(id) {
+        axios
+            .put(`https://jsonplaceholder.typicode.com/posts/${id}`)
+            .then((response) => {
+                this.setState(response.data);
+            });
+    }
+    
     deleteRow(id, e) {
         axios
             .delete(`https://jsonplaceholder.typicode.com/posts/${id}`)
@@ -28,6 +35,7 @@ export default class Home extends React.Component {
                 // console.log(res);
                 // console.log(res.data);
 
+                //filter if id = id search id
                 const postRandom = this.state.postRandom.filter(
                     (item) => item.id !== id
                 );
@@ -55,8 +63,11 @@ export default class Home extends React.Component {
                                 <td>{index.title}</td>
                                 <td>{index.body}</td>
                                 <td className="d-flex">
-                                    <button className="mx-2 btn btn-primary">
-                                        update
+                                    <button
+                                        className="mx-2 btn btn-primary"
+                                        onClick={this.updateRow}
+                                    >
+                                        Update
                                     </button>
                                     <button
                                         className="btn btn-danger"
