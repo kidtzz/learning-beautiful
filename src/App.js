@@ -9,6 +9,7 @@ import Home from "./components/pages/Home";
 import News from "./components/pages/News";
 import User from "./components/pages/User";
 import Album from "./components/pages/Album";
+import Login from "./components/pages/Login";
 
 export default class App extends React.Component {
     render() {
@@ -22,6 +23,7 @@ export default class App extends React.Component {
                         <Route exact path="/User/:id" component={User} />
                         <Route exact path="/News" element={<News />} />
                         <Route exact path="/Album" element={<Album />} />
+                        <Route exact path="/Login" element={<Login />} />
                     </Routes>
                     <Footer />
                 </div>

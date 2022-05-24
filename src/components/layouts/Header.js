@@ -31,6 +31,9 @@ const Header = () => {
                                 Album
                             </NavLink>
                         </Nav>
+                        <NavLink className="Nav-header" to="/Login">
+                            Login
+                        </NavLink>
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
