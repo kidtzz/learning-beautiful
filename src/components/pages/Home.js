@@ -71,7 +71,7 @@ export default class Home extends React.Component {
                                 placeholder="Body"
                             />
                             <button className="btn btn-primary px-5 ">
-                                Add
+                                Adddd
                             </button>
                         </Form.Group>
                     </Form>
