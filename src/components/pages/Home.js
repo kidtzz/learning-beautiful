@@ -53,7 +53,7 @@ export default class Home extends React.Component {
             <div className="container">
                 <About />
                 <div className="tambah-data">
-                    <h4>Insert Data disini</h4>
+                    <h4>Insert Data Disini</h4>
 
                     <Form>
                         <Form.Group
@@ -71,7 +71,7 @@ export default class Home extends React.Component {
                                 placeholder="Body"
                             />
                             <button className="btn btn-primary px-5 ">
-                                Adddd
+                                Addd
                             </button>
                         </Form.Group>
                     </Form>
